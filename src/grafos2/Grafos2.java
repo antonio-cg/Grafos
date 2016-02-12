@@ -49,7 +49,8 @@ public class Grafos2 {
         
        
         grafo.imprimeRelaciones();
-        grafo.listaAdyacencia();
+        grafo.imprimeListaAdyacencia();
+        grafo.getListaAdyacencia();
     }
     
 }

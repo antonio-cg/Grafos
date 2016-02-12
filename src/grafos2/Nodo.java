@@ -15,6 +15,23 @@ public class Nodo {
     
     private String nombre;
     private boolean visitado ; 
+
+    public boolean isVisitado() {
+        return visitado;
+    }
+
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
+
+    public Nodo getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Nodo siguiente) {
+        this.siguiente = siguiente;
+    }
+    Nodo siguiente;
     
     public Nodo(String nombre)
     {

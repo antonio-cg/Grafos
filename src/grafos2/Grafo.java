@@ -6,6 +6,7 @@
 package grafos2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -114,8 +115,10 @@ public class Grafo {
     }
     
     
-    
-    public void listaAdyacencia()
+    /**
+     * Imprime una lista de adyacencia
+     */
+    public void imprimeListaAdyacencia()
     {
         for(Nodo nodo : listaNodo)
         {
@@ -131,5 +134,30 @@ public class Grafo {
             System.out.println(" ");
         }
     }
+    
+    public void getListaAdyacencia()
+    {
+        List<Nodo> lista = new ArrayList<>();
+        Nodo inicial;//Con que nodo iniciamos
+        Nodo actual; //el nodo actual
+        for(Nodo n : listaNodo) //Recorremos todos los nodos
+        {
+            actual = n;
+            inicial = n;
+            for(Arista arista : listaArista)
+            {
+                if(n.equals(arista.getInicio()))
+                {
+                    actual.setSiguiente(arista.getFin());
+                    actual = arista.getFin();
+                }
+            }
+            actual.setSiguiente(null);
+            lista.add(inicial);
+        }
+        System.out.println("");
+        
+    }
+    
     
 }
