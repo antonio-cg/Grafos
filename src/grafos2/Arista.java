@@ -13,6 +13,38 @@ public class Arista {
     
     private Nodo inicia;
     private Nodo termina;
+
+    public Nodo getInicia() {
+        return inicia;
+    }
+
+    public void setInicia(Nodo inicia) {
+        this.inicia = inicia;
+    }
+
+    public Nodo getTermina() {
+        return termina;
+    }
+
+    public void setTermina(Nodo termina) {
+        this.termina = termina;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getHeuristica() {
+        return heuristica;
+    }
+
+    public void setHeuristica(double heuristica) {
+        this.heuristica = heuristica;
+    }
     private double peso = 0;
     private double heuristica = 0;
     

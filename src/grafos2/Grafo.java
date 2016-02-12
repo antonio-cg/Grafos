@@ -148,8 +148,11 @@ public class Grafo {
             {
                 if(n.equals(arista.getInicio()))
                 {
-                    actual.setSiguiente(arista.getFin());
-                    actual = arista.getFin();
+                    Nodo siguiente = Nodo.nuevaInstancia(arista.getFin());
+                    siguiente.setPeso(arista.getPeso());
+                    siguiente.setHeuristica(arista.getHeuristica());
+                    actual.setSiguiente(siguiente);
+                    actual = siguiente;
                 }
             }
             actual.setSiguiente(null);
