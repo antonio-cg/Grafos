@@ -113,4 +113,23 @@ public class Grafo {
         }
     }
     
+    
+    
+    public void listaAdyacencia()
+    {
+        for(Nodo nodo : listaNodo)
+        {
+            System.out.print(nodo.getNombre() +" -> ");
+            for(Arista arista : listaArista)
+            {
+                
+                if(nodo.equals(arista.getInicio()))
+                {
+                    System.out.print(arista.getFin().getNombre() + " -> ");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+    
 }

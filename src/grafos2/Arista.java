@@ -48,5 +48,16 @@ public class Arista {
         return new Arista(termina,inicia);
     }
     
+    public Nodo getFin()
+    {
+        return termina;
+    }
+    
+    public Nodo getInicio()
+    {
+        return inicia;
+    
+    }
+    
 
 }
